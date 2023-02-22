@@ -55,8 +55,6 @@ return licenseLink;
 // If there is no license, return an empty string
 function renderLicenseSection(license) {
   let licenseLink;
-
-
 }
 
 // TODO: Create a function to generate markdown for README
@@ -64,15 +62,22 @@ function generateMarkdown(data) {
   const sections = ["Title", "Descriptor", "Usage", "Installation", "Test"]
   console.log(data);
     let licenseLink = renderLicenseLink(data.license);
-  return `Title: ${data.title}\n
-  Descriptor: ${data.descriptor}\n
-  Usage: ${data.usage}\n
-  Installation: ${data.installation}\n
-  Test: ${data.test}\n
-  License: ${data.license}\n
-    License link: ${licenseLink}\n 
-  username: ${data.username}\n
-  email: ${data.email}\n
+  return `# ${data.title}\n
+  ## Description\n 
+  ${data.description}\n
+  ## Installation\n 
+  ${data.installation}\n
+  ## Usage\n 
+  ${data.usage}\n
+  ## Credits\n 
+  ${data.credits}(${data.username})\n
+  ## Test\n 
+  ${data.test}\n
+  ## License\n 
+  ${data.license}\n
+  ## Badges\n 
+  [${data.badges}](${licenseLink})\n 
+
 
 `;
 }
