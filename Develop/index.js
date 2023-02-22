@@ -14,13 +14,8 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'descriptor',
+        name: 'description',
         message: 'Type a descriptor of the project'
-    },
-    {
-        type: 'input',
-        name: 'usage',
-        message: 'Type out how to use this'
     },
     {
         type: 'input',
@@ -29,8 +24,13 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'test',
-        message: 'Type out the test instructions'
+        name: 'usage',
+        message: 'Type out how to use the project'
+    },
+    {
+        type: 'input',
+        name: 'credits',
+        message: 'Type out the collaborators, with links to their Github profiles'
     },
     {
         type: 'list',
@@ -40,15 +40,20 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'username',
-        message: 'Type your github username:',
-        
+        name: 'badges',
+        message: 'Badges for licenses',
     },
     {
         type: 'input',
-        name: 'email',
-        message: 'Type your e-mail address'
-    }
+        name: 'features',
+        message: 'Type out the features of the project',
+    },
+    {
+        type: 'input',
+        name: 'test',
+        message: 'Type out the test instructions'
+    },
+
 ];
 
 // TODO: Create a function to write README file
